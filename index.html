@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Huỳnh Quốc Đạt</title>
+    <link rel="stylesheet" href="hero.css">
+    <style>
+     table, th, td {
+        border: 1px solid white;text-align:center
+      }
+    </style>
+    <style>
+        th {
+            white-space: nowrap;
+        }
+    </style>
+    <style>
+       .table-container {
+          position: relative;
+          }
+
+       table {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 5%);}
+    </style>
+    <style>
+      /* Thong bao Popup  */
+.tbpopup .tboverlay {
+position:fixed;
+top:0px;
+left:0px;
+width:100vw;
+height:100vh;
+background:rgba(0,0,0,0.7);
+z-index:1;
+display:none;
+}
+ 
+.tbpopup .tbcontent {
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0);
+background:#fff;
+max-width:500px;
+z-index:2;
+text-align:center;
+padding:20px;
+box-sizing:border-box;
+font-family:"Open Sans",sans-serif;
+border-radius:20px;
+display: block;
+position: fixed;
+box-shadow:0px 0px 10px #111;
+}
+@media (max-width: 700px) {
+.tbpopup .tbcontent {width:90%;}
+}
+ 
+.tbpopup .tbclose-btn {
+cursor:pointer;
+position:absolute;
+right:20px;
+top:20px;
+width:35px;
+height:35px;
+color:#ff4444;
+font-size:30px;
+font-weight:600;
+line-height:35px;
+text-align:center;
+border-radius:50%;
+}
+ 
+.tbpopup.active .tboverlay {
+display:block;
+}
+ 
+.tbpopup.active .tbcontent {
+transition:all 300ms ease-in-out;
+transform:translate(-50%,-50%) scale(1);
+}
+.tbbuttom{background:#00cc00;color:#fff}
+  </style>
+  </head>
+  <body onload="thongbaopopup()">
+    <section id="hero">
+  <video id="heroVideoBg" autoplay loop muted>
+    <source type="video/mp4" src="D:\Tài liệu\web\bgr.mp4">
+  </video>
+  <div id="heroContent">
+    <div style="font-size: 20px">
+<script type="text/javascript">
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#00FF00","#FF0000","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00","#00FF00");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift(){for(var b=0;b<Buchstabe.length;b++){document.all["a"+b].style.color=farben[b]}farbverlauf()}function string2array(b){Buchstabe=new Array();while(farben.length<b.length){farben=farben.concat(farben)}k=0;while(k<=b.length){Buchstabe[k]=b.charAt(k);k++}}function divserzeugen(){for(var b=0;b<Buchstabe.length;b++){document.write("<span id='a"+b+"' class='a"+b+"'>"+Buchstabe[b]+"</span>")}farbschrift()}var a=1;function farbverlauf(){for(var b=0;b<farben.length;b++){farben[b-1]=farben[b]}farben[farben.length-1]=farben[-1];setTimeout("farbschrift()",30)}var farbsatz=1;function farbtauscher(){farben=farbbibliothek[farbsatz];while(farben.length<text.length){farben=farben.concat(farben)}farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001))}setInterval("farbtauscher()",5000);
+
+text= "Chào Mừng Bạn Đến Với Kaka Lạc Lối"; //h
+string2array(text);
+divserzeugen();
+//document.write(text);
+</script></div>
+    <h2 style="color:#3300FF;text-align:center">BÀI THI TRỰC TUYẾN</h1>
+   <div class="table-container">
+    <table>
+      <caption style="color:#FF3300;text-align:center"><h3> Danh sách các môn</h3></caption>
+      <tr>
+        <th><p style="color:white">Bộ môn</p> </th>
+        <th><p style="color:white">Thi giữa kì I</p></th>
+        <th><p style="color:white">Thi cuối kì I</p></th>                                                           
+        <th><p style="color:white">Trạng thái</p></th> 
+        <th><p style="color:white">Thi giữa kì II</p></th>
+        <th><p style="color:white">Trạng thái</p></th>
+        <th><p style="color:white">Thi cuối kì II</p></th>
+        <th><p style="color:white">Trạng thái</p></th>   
+      </tr>
+      <tr>
+        <th><p style="color:white">Lịch sử</p> </th>
+        <th rowspan="4"> <p style="color:#FF33CC;text-align:center"> Hoàn thành</p></th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+      </tr>
+      <tr>
+        <th><p style="color:white">Tin học</p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>   
+        <th><p style="color:white"></p> </th>    
+      </tr>
+      <tr>
+        <th><p style="color:white">Sinh học</p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>    
+        <th><p style="color:white"></p> </th>    
+      </tr>
+      <tr>
+        <th><p style="color:white">Tiếng anh</p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>
+        <th><p style="color:white"></p> </th>
+        <th><p style="color:#33FFFF">Đang cập nhật</p> </th>   
+        <th><p style="color:white"></p> </th>    
+      </tr>
+     </table>
+   </div>
+    <br>
+    <br>
+    <div style="position:relative;left:200px;top:100px">
+      <h2 style="font-family: Comic San MS;color:#00FF33">Good luck ☘</h2>
+      <h3 style="font-family: Courier;color:#00FFFF"> Huỳnh Quốc Đạt </h3>
+    </div>
+    <div style="position:relative;top:-180px">
+      <marquee style="position:relative;top:-100%"><p style="color:white"> Sản phẩm được tạo bởi Huỳnh Quốc Đạt. Cảm ơn!</p></marquee>
+    </div>
+    
+    
+  </div>
+    </section>
+   <?php if( is_home() ) { ?>
+<div class="tbpopup" id="tbpopup-1">
+<div class="tboverlay"></div>
+<div class="tbcontent">
+<div class="tbclose-btn" onclick="thongbaopopup()">&times;</div>
+<div style="font-size:30px;font-weight:bold">New Update</div>
+<p>-Yêu cầu đăng nhập tài khoản quizz</p>
+<p>-Mỗi người chỉ được 1 lượt chơi</p>
+<p>-Thành viên VIP sẽ nhận được<p style="color:red"> VÔ HẠN LƯỢT CHƠI</p></p>
+<p>-Cách nhận VIP liên hệ admin</p>
+<p style="text-align:center"> Chúc bạn may mắn☘</p>
+</div>
+</div>
+<?php } ?>
+  </body>
+<!-- js thong bao popup -->
+<script>
+function thongbaopopup(){
+document.getElementById("tbpopup-1").classList.toggle("active");
+}
+</script>
+</html>
